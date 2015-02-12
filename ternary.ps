@@ -1,0 +1,11 @@
+% Don't forget to document your code - brief description, inputs, outputs, and example usage
+% Author: Roman Wendelboe
+% Effect: mimic the ternary operator 
+% Example: 3 {(if not zero)} {(if zero)} ? (if not zero) will be pushed onto the stack 
+/? 
+{  
+	3 2 roll % Roll the 3 elements on the stack twice to the right 
+	0 ne     % Compare the top of the stack with zero
+	3 1 roll % Roll the 3 elements on the stack one time to the right
+	ifelse
+} def
